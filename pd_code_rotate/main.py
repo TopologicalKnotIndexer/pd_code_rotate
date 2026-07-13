@@ -15,8 +15,10 @@ def rotate(pd_code:list[list]) -> list[list]:
         ax, bx, cx, dx = crossing
         if nxt[bx] == dx:
             new_pd_code.append([bx, ax, dx, cx])
-        else:
+        elif nxt[dx] == bx:
             new_pd_code.append([dx, cx, bx, ax])
+        else:
+            raise ValueError("crossing is inconsistent with component orientation")
     
     return new_pd_code
 
