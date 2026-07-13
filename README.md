@@ -1,17 +1,23 @@
-# pd_code_rotate
-given a link or knot，rotate its 2d diagram by changing its pd_code.
+# pd-code-rotate
 
-## Install
+Rotate every PD crossing while preserving component orientation.
+
+## Installation
 
 ```bash
 pip install pd-code-rotate
 ```
 
-## Usage
+## Quick start
 
-```python
-import pd_code_rotate
+`from pd_code_rotate import rotate`.
 
-pd_code = [[1, 5, 2, 4], [3, 1, 4, 6], [5, 3, 6, 2]]
-print(pd_code_rotate.rotate(pd_code))
-```
+PD codes are lists of four-entry crossings. Each arc label must occur exactly twice. Functions validate their inputs and do not mutate caller-owned PD-code lists unless explicitly documented.
+
+## Development
+
+Use Python 3.10 or newer for Python packages. Build distributions with `poetry build`. Run the package's tests or examples before publishing. C++ projects require a modern standards-compliant compiler.
+
+## License
+
+MIT. See `LICENSE`.
